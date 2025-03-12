@@ -1,0 +1,1052 @@
+/*INDEX PAGE*/
+
+@font-face {
+    font-family: 'UNCAGE-Medium';
+    src: url('/fonts/UNCAGE-Medium.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'UNCAGE-Regular';
+    src: url('/fonts/UNCAGE-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'WorkSans';
+    src: url('/fonts/WorkSans-Light.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'WorkSans-Bold';
+    src: url('/fonts/WorkSans-SemiBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@keyframes animatedIntroGradient {
+    0% {
+        background-position: 0% 0%;
+    }
+    100% {
+        background-position: 100% 100%;
+    }
+}
+@keyframes animatedArrow {
+    0% {
+        bottom: 0;
+    }
+    100% {
+        bottom: 3%;
+    }
+}
+
+html, body
+{
+    width: 100vw !important;
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+body
+{
+    display: grid;
+    grid-template-rows: 1fr;
+    height: 100vh;
+    text-align: center;
+    font-family: "UNCAGE-Regular";
+    margin: 0;
+    padding: 0;
+}
+
+.bg
+{
+    position: relative;
+}
+
+@media (min-width: 1100px) {
+    body
+    {
+        grid-template-columns: 15vw 1fr 15vw;
+    }
+}
+
+@media (max-width: 1150px) {
+    body
+    {
+        grid-template-columns: 100vw;
+    }
+}
+
+@media (min-width: 2160px) {
+    body
+    {
+        grid-template-columns: auto 1280px auto;
+    }
+}
+
+img
+{
+    -webkit-user-select: none;
+}
+
+#index>.bg
+{
+    display: grid;
+    grid-template-rows: auto 100vh auto auto;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    background-color: whitesmoke
+}
+
+@media (max-width: 1150px) {
+    #index>.bg
+    {
+        grid-column: 1;
+    }
+}
+
+header
+{
+    position: sticky;
+    top: 0;
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 25% auto 25%;
+    grid-column: 1;
+    grid-row: 1;
+    z-index: 2;
+    background-color: whitesmoke;
+}
+
+#left
+{
+    grid-row: 1;
+    grid-column: 1;
+    width: 3rem;
+    justify-self: center;
+}
+
+#right
+{
+    grid-row: 1;
+    grid-column: 3;
+    width: 3rem;
+    justify-self: center;
+}
+
+.dropdown
+{
+    grid-row: 1;
+    grid-column: 3;
+    width: 3rem;
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    background-color: rgba(22, 22, 22, 0.74);
+    min-width: 160px;
+    box-shadow: 0px 0px 5px 0px black;
+    z-index: 1;
+    left: 0;
+    border-radius: 5px;
+}
+
+.dropdown-content a
+{
+    color: white;
+    font-family: "Worksans";
+    font-size: 18px;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-radius: 5px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .dropdown:hover .dropdown-content {display: block;}
+}
+
+.cart
+{
+    grid-row: 1;
+    grid-column: 3;
+    width: 3rem;
+    justify-self: center;
+    position: relative;
+    display: inline-block;
+    border-radius: 5px;
+}
+
+img
+{
+    max-width: 100%;
+    height: auto;
+    -webkit-user-drag: none;
+    padding: 10px;
+}
+
+header>.title>h1
+{
+    grid-row: 1;
+    grid-column: 2;
+    font-size: 1.3em;
+    font-family: "UNCAGE-Medium";
+}
+
+header>h2
+{
+    grid-row: 1;
+    grid-column: 3;
+    font-size: 1.1em;
+}
+
+.side-bar
+{
+    position: fixed;
+    left: 15vw;
+    width: 200px;
+    height: 100%;
+    background-color: whitesmoke;
+    text-align: left;
+    padding: 0;
+    z-index: 1;
+}
+
+.side-bar ul
+{
+    margin-top: 75px;
+    padding-left: 5px !important;
+    padding: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(0,1fr));
+    gap: 10px;
+    list-style: none;
+}
+
+.side-bar > ul *
+{
+    font-family: "WorkSans";
+    font-size: 25px;
+}
+
+@media (max-width: 1150px) {
+    .side-bar
+    {
+        left: 0;
+    }
+}
+
+@media (min-width: 2160px) {
+    .side-bar
+    {
+        left: 50vw;
+        transform: translateX(-640px);
+    }
+}
+
+#index>.bg>.intro
+{
+    grid-row: 2;
+    margin-top: 40vh;
+}
+
+#index>.bg>.intro>h1
+{
+    font-size: 1.6em;
+    margin: 0;
+}
+
+#index>.bg>.intro>h2
+{
+    font-size: 1.3em;
+    margin: 0;
+    background: linear-gradient(to bottom right, #00ff26, #0080ff, #9500ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-size: 200%;
+    animation: animatedIntroGradient 1s linear infinite alternate;
+}
+
+@media (max-width: 1150px) {
+    #index>.bg>.intro>h1
+    {
+        font-size: 1.4em;
+    }
+
+    #index>.bg>.intro>h2
+    {
+        font-size: 1em;
+    }
+}
+
+
+#index>.bg>.bold
+{
+    font-family: "UNCAGE-Medium";
+}
+
+#index>.bg>.intro>img
+{
+    position: absolute;
+    top: 95vh;
+    animation: animatedArrow 1s ease-in-out infinite alternate;
+}
+
+#index>.bg>.hidden
+{
+    opacity: 0;
+    transition: opacity 1s ease-in;
+}
+
+#index>.bg>.show
+{
+    opacity: 1;
+    transition: opacity 1s ease-out;
+}
+
+#index>.bg>main
+{
+    grid-column: 1;
+    grid-row: 3;
+    gap: 1rem;
+    font-family: "WorkSans";
+}
+
+@media (min-width: 1100px) {
+    #index>.bg>main
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (max-width: 1100px) {
+    #index>.bg>main
+    {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0;
+    }
+}
+
+.productSection
+{
+    border-radius: 15px;
+    padding: 1rem;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: box-shadow 0.1s ease-in-out;
+}
+
+.productSection:hover
+{
+    box-shadow: 0px 0px 10px black;
+}
+
+.productSection img
+{
+    object-fit: contain;
+    background-color: #ebebeba8;
+}
+
+.sectionText
+{
+    margin-top: auto;
+    text-align: left;
+}
+
+.sectionText>h1
+{
+    font-size: 1.1em;
+}
+
+.sectionText>h2
+{
+    font-size: 1.2em;
+}
+
+#index footer
+{
+    grid-column: 2;
+    grid-row: 4;
+}
+
+@media (max-width: 1100px) {
+    .productSection
+    {
+        margin: 0;
+        padding: 0;
+    }
+
+    .sectionText
+{
+    text-align: center;
+}
+}
+
+/*PRODUCT PAGE*/
+
+#product
+{
+
+}
+
+#product>.bg
+{
+    display: grid;
+    grid-template-rows: auto auto auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    background-color: whitesmoke;
+    font-family: "WorkSans";
+}
+
+@media (max-width: 1150px) {
+    #product>.bg
+    {
+        grid-column: 1;
+    }
+}
+
+
+
+#product #back-button
+{
+    width: 100%;
+    grid-row: 2;
+    text-align: left;
+    align-items: flex-start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#product main
+{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column: 1;
+    grid-row: 3;
+    gap: 1rem;
+    font-family: "WorkSans";
+}
+
+#product .product-image
+{
+    display: flex;
+    grid-column: 1;
+    width: 100%;
+    height: min-content;
+    background-color: rgba(213, 213, 213, 0.689);
+    border-radius: 2%;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    justify-content: center;
+}
+
+#product .product-image *
+{
+    width: 80%;
+    height: auto;
+    aspect-ratio: 16/11;
+}
+
+#product .product-info
+{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+
+#product .product-info *
+{
+    text-align: left;
+}
+
+#product .product-title
+{
+    font-family: "WorkSans-Bold";
+    font-size: 2em;
+    margin: 0;
+}
+
+#product .product-desc
+{
+    font-size: 1.5em;
+}
+
+#product .product-price
+{
+    font-size: 1.7em;
+    font-family: "WorkSans-Bold";
+}
+
+#product .product-buttons
+{
+    margin-top: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#product .product-buttons div
+{
+    width: 95%;
+    background-color: white;
+    border: 2px rgb(202, 202, 202) solid;
+    border-radius: 0.5rem;
+    text-align: center;
+    justify-self: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#product .product-button *
+{
+    font-size: 1.4rem;
+    font-family: "WorkSans-Bold";
+    color: black;
+}
+
+#product #cart
+{
+
+}
+
+#product #save
+{
+
+}
+
+#product .buy-button
+{
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 100%;
+    align-self: center;
+}
+
+#product #buy
+{
+    text-align: center;
+    width: 97.5%;
+    justify-self: center;
+    background-color: white;
+    border: 2px rgb(202, 202, 202) solid;
+    border-radius: 0.5rem;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#product #buy *
+{
+    font-size: 1.4em;
+    font-family: "WorkSans-Bold";
+    color: black;
+}
+
+@media (max-width: 1100px) {
+    #product .product-title
+    {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    #product .product-desc
+    {
+        font-size: 20px;
+    }
+
+    #product .product-price
+    {
+        font-size: 25px;
+        margin: 0;
+    }
+
+    #product .product-button *
+    {
+        font-size: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    #product #buy *
+    {
+        font-size: 20px;
+        text-align: center;
+        height: auto;
+    }
+
+    #product .product-main
+    {
+        grid-row: 5;
+        white-space: pre-line;
+        text-align: left;
+        font-size: 15px;
+    }
+}
+
+@media (hover: none) and (pointer: coarse) {
+    #product .product-title
+    {
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    #product .product-desc
+    {
+        font-size: 2.4vw;
+    }
+
+    #product .product-price
+    {
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    #product .product-button *
+    {
+        font-size: 10px;
+        text-align: center;
+        height: auto;
+    }
+
+    #product #buy *
+    {
+        font-size: 10px;
+        text-align: center;
+        height: auto;
+    }
+
+    #product .product-main
+    {
+        grid-row: 5;
+        white-space: pre-line;
+        text-align: left;
+        font-size: 2vw;
+    }
+}
+
+#product .product-spill
+{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: fit-content;
+    overflow-x: scroll;
+    grid-row: 4;
+}
+
+#product .product-spill-image
+{
+    display: flex;
+    background-color: white;
+    border-radius: 0.5rem;
+    min-width: 15%;
+    height: auto;
+    justify-content: center;
+    padding: 5px;
+}
+
+#product .product-spill-image:hover
+{
+    cursor: pointer;
+}
+
+#product .product-main
+{
+    grid-row: 5;
+    white-space: pre-line;
+    text-align: left;
+}
+
+#product footer
+{
+    grid-column: 1;
+    grid-row: 6;
+}
+
+
+/*AUTH PAGE*/
+
+#auth
+{
+    grid-column: 1 / -1;
+}
+
+#auth>.bg
+{
+    display: grid;
+    grid-template-rows: auto 95vh auto;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    background-color: whitesmoke;
+}
+
+#auth main
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    justify-self: center;
+    align-self: center;
+    width: 500px;
+    height: fit-content;
+    background-color: rgb(231, 231, 231);
+    border-radius: 10px;
+    border: 2px rgba(215, 215, 215, 0.552) solid;
+}
+
+@media (max-width: 1150px) {
+    #auth>.bg
+    {
+        grid-template-columns: 100vw;
+        grid-column: 1;
+    }
+
+    #auth main
+    {
+        width: 350px;
+    }
+}
+
+.pageTitle
+{
+    font-size: 2em;
+    font-family: "WorkSans";
+}
+
+#authForm
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-items: center;
+}
+
+#authFormContainer
+{
+    grid-row: 1;
+    width: 80%;
+}
+
+.authInput
+{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px rgba(138, 138, 138, 0.552) solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.authInput *
+{
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    border: 0;
+    border-radius: 10px;
+    text-align: left;
+    font-family: "WorkSans";
+}
+
+.authInput input:focus
+{
+    outline: none;
+    border: none;
+}
+
+.authInput label
+{
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.authInput input
+{
+    color: black;
+    font-size: 1em;
+}
+
+#auth button
+{
+    box-sizing: border-box;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px black solid;
+}
+
+#signInOptions
+{
+    width: 100%;
+    max-width: 40%;
+    justify-self: center;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto 1fr;
+}
+
+#auth p
+{
+    color: rgb(79, 79, 79);
+    font-size: 15px;
+    padding: 0;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.signInOption
+{
+    grid-row: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 100px;
+    height: auto;
+}
+
+.signInOption>img
+{
+    grid-row: 2;
+    width: 100%;
+    max-width: 50px;
+    height: auto;
+    aspect-ratio: 16/10;
+}
+
+.alternate-text
+{
+    display: none;
+}
+
+.alternate-link
+{
+    display: none;
+}
+
+@media (hover: none) and (pointer: coarse) {
+    .alternate-text
+    {
+        display: inline;
+        font-family: "WorkSans";
+    }
+
+    .alternate-link
+    {
+        display: inline;
+        text-decoration: underline;
+        color: blue;
+    }
+}
+
+/*Register page*/
+
+#register>.bg
+{
+    display: grid;
+    grid-template-rows: auto 0.95fr auto;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    background-color: whitesmoke;
+}
+
+#register main
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    justify-self: center;
+    align-self: center;
+    width: 500px;
+    max-width: 500px;
+    min-width: 350px;
+    height: fit-content;
+    background-color: rgb(231, 231, 231);
+    border-radius: 10px;
+    border: 2px rgba(215, 215, 215, 0.552) solid;
+}
+
+@media (max-width: 1150px) {
+    #register>.bg
+    {
+        grid-template-columns: 100vw;
+        grid-column: 1;
+    }
+
+    #register main
+    {
+        width: 350px;
+    }
+}
+
+#registerForm
+{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    align-content: center;
+    justify-items: center;
+}
+
+#registerFormContainer
+{
+    grid-row: 1;
+    width: 80%;
+}
+
+.registerInput
+{
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 1fr;
+    width: 100%;
+    height: 50px;
+    background-color: white;
+    border-radius: 10px;
+    border: 2px rgba(138, 138, 138, 0.552) solid;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    justify-self: center;
+    overflow: hidden;
+}
+
+.registerInput *
+{
+    padding: 0;
+    margin: 0;
+    margin-left: 5px;
+    border: 0;
+    border-radius: 10px;
+    text-align: left;
+    font-family: "WorkSans";
+}
+
+.registerInput input:focus
+{
+    outline: none;
+    border: none;
+}
+
+.registerInput label
+{
+    margin-top: 5px;
+    font-size: 0.9em;
+}
+
+.registerInput input
+{
+    color: black;
+    font-size: 1em;
+}
+
+input[type="date"]
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-color: white;
+}
+
+input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+}
+
+.registerCheckbox
+{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.registerCheckbox *
+{
+    font-family: "WorkSans";
+    font-size: 0.9em;
+}
+
+.registerCheckbox #checkbox-tick
+{
+
+}
+
+.registerCheckbox a
+{
+    text-decoration: underline;
+}
+
+#register button
+{
+    box-sizing: border-box;
+    grid-row: 1 / -1;
+    width: 100%;
+    height: 50px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 20px;
+    background-color: rgb(55, 55, 55);
+    color: white;
+    font-size: 1em;
+    border-radius: 10px;
+    text-align: center;
+    border: 2px black solid;
+}
+
+/*PRIVACY POLICY PAGE*/
+
+#privacyPolicy>.bg
+{
+    display: grid;
+    grid-template-rows: auto auto 1fr auto;
+    grid-template-columns: 1fr;
+    grid-column: 2;
+    background-color: whitesmoke;
+}
+
+#privacyPolicy>.bg>.intro *
+{
+    font-size: 3em;
+    font-family: "WorkSans";
+}
+
+#privacyPolicy>.bg>.intro
+{
+    margin: 0;
+}
+
+#privacyPolicy>.bg>main
+{
+    justify-self: center;
+    width: 80%;
+}
